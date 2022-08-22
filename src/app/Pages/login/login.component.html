@@ -1,0 +1,15 @@
+<p>login works!</p>
+<form [formGroup]="myForm" (ngSubmit)="login()">
+    <div>
+        <label>Email</label>
+        <input type="text" formControlName="correo">
+    </div>
+    <div *ngIf="myForm.get('correo')?.errors && myForm.get('correo')?.dirty">
+        El Campo es obligatorio
+    </div>
+    <div>
+        <label>Contraseña</label>
+        <input type="password" formControlName="clave">
+    </div>
+    <button type="submit" [disabled]="myForm.invalid">Ingresar</button>
+</form>

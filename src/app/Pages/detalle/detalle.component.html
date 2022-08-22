@@ -1,0 +1,9 @@
+<p>detalle works!</p>
+
+<div *ngIf="isLoading">
+    Loading ...
+</div>
+<div *ngIf="!isLoading && !isError">
+    <h1>{{producto?.title}}</h1>
+    <p>{{producto?.price | currency}}</p>
+</div>
